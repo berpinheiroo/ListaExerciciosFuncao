@@ -146,3 +146,9 @@ function CalcularMedia(nota1, nota2, nota3, media){
         return mediaPonderada
     }
 }
+
+let nota1 = parseInt(prompt("Insira a primeira nota"))
+let nota2 = parseInt(prompt("Insira a segunda nota"))
+let nota3 = parseInt(prompt("Insira a terceira nota"))
+let media = prompt("Insira o tipo de media desejada")
+CalcularMedia(nota1, nota2, nota3, media)
