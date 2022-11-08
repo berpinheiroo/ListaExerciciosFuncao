@@ -83,7 +83,7 @@ d. A porcentagem de pessoas com salários até R$1.500,00
 Salve os dados dos habitantes em arrays, crie uma função para cada item que
 retorna o que é pedido. */
 
-let salarios = [1000, 1200, 1500, 2000, 2200, 4000]
+/*let salarios = [1000, 1200, 1500, 2000, 2200, 4000]
 let filhos = [0, 1, 3, 2, 0, 4]
 
 function CalcularMediaSalarial(){
@@ -127,4 +127,22 @@ function CalcularPorcentagem(){
 console.log(CalcularMediaSalarial())
 console.log(CalcularMediaFilhos())
 console.log(VerificarMaiorSalario())
-console.log(CalcularPorcentagem() + "%")
+console.log(CalcularPorcentagem() + "%") */
+
+// EXERCICIO 3 ---------------------------------------------
+
+/* Crie uma função que recebe 3 notas de um aluno como parâmetro e uma letra. Se a
+letra for A a função calcula a média aritmética das notas do aluno, se for P, a sua
+média ponderada (pesos: 5, 3 e 2). A média calculada deve ser retornada */
+
+function CalcularMedia(nota1, nota2, nota3, media){
+    let mediaAritmetica = 0
+    let mediaPonderada = 0
+    if(media == "a"){
+        mediaAritmetica = (nota1 + nota2 + nota3) / 3
+        return mediaAritmetica
+    } else {
+        mediaPonderada = ((nota1 * 5) + (nota2 * 3) + (nota3 * 2)) / 10
+        return mediaPonderada
+    }
+}
