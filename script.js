@@ -1,3 +1,5 @@
+// EXERCICIO 1 ---------------------------------------------
+
 /* Uma empresa comercial quer um programa para controlar o orçamento de seus
 projetos. Crie uma função para criar um projeto, essa função deve solicitar ao
 usuário o nome do projeto e o seu orçamento total. Crie também uma função que
@@ -6,7 +8,7 @@ e “D” - despesa), uma receita deve ser somada ao saldo e uma despesa subtra�
 do saldo, seu código deve impedir uma despesa maior que o saldo disponível e no
 final exibir o saldo atual desse projeto. */
 
-let orcamentoTotal = []
+/*let orcamentoTotal = []
 let nomeProjeto = []
 let index = 0
 
@@ -39,4 +41,32 @@ while(continuar == "s"){
         AtualizarProjeto(nomeProjeto, valor, despesa)
     }
     continuar = prompt("Deseja continuar sim ou nao? 's' para sim")
+}*/
+
+
+// EXERCICIO 2 ---------------------------------------------
+
+/*Faça uma função que verifique se um número é perfeito ou não. Um valor é dito
+perfeito quando ele é igual a soma dos seus divisores. Ex.: 6 é perfeito, 6 = 1 + 2 +
+3, que são seus divisores. A função deve retornar um valor booleano.*/
+
+function Verificar(){
+    let divisores = []
+    let numero = parseInt(prompt("Insira um numero a verificar"))
+    for(let index = 1; index < numero; index++){
+        if(numero % index == 0){
+            divisores.push(index)
+        }
+    }
+    let perfeito = 0
+    divisores.forEach(x => {
+        perfeito = perfeito + x
+        console.log(perfeito)
+    })
+    
+    if(perfeito == numero) {
+        return true
+    } else {
+        return false
+    }
 }
