@@ -50,7 +50,7 @@ while(continuar == "s"){
 perfeito quando ele é igual a soma dos seus divisores. Ex.: 6 é perfeito, 6 = 1 + 2 +
 3, que são seus divisores. A função deve retornar um valor booleano.*/
 
-function Verificar(){
+/*function Verificar(){
     let divisores = []
     let numero = parseInt(prompt("Insira um numero a verificar"))
     for(let index = 1; index < numero; index++){
@@ -69,4 +69,62 @@ function Verificar(){
     } else {
         return false
     }
+}*/
+
+
+// EXERCICIO 3 ---------------------------------------------
+
+/* A prefeitura de uma cidade fez uma pesquisa entre seus habitantes, coletando
+dados sobre o salário e o número de filhos. A prefeitura deseja saber:
+a. A média do salário da população;
+b. A média do número de filhos;
+c. O maior salário;
+d. A porcentagem de pessoas com salários até R$1.500,00
+Salve os dados dos habitantes em arrays, crie uma função para cada item que
+retorna o que é pedido. */
+
+let salarios = [1000, 1200, 1500, 2000, 2200, 4000]
+let filhos = [0, 1, 3, 2, 0, 4]
+
+function CalcularMediaSalarial(){
+    let media = 0
+    salarios.forEach(salario => media = salario + media)
+    media = media / salarios.length
+    return media
 }
+
+function CalcularMediaFilhos() {
+    let media = 0
+    filhos.forEach(x => media = x + media)
+    media = media / filhos.length
+    return media
+}
+
+function VerificarMaiorSalario() {
+    let maiorSalario = 0
+    salarios.forEach(x => {
+        if(x > maiorSalario){
+            maiorSalario = x
+        }
+    })
+
+    return maiorSalario
+}
+
+function CalcularPorcentagem(){
+    let porcentagem = 0
+    let salariosAte1500 = 0
+    salarios.forEach(salario => {
+        if(salario <= 1500){
+            salariosAte1500++
+        }
+    })
+
+    porcentagem = salariosAte1500 / salarios.length
+    return porcentagem*100 + "%"
+}
+
+console.log(CalcularMediaSalarial())
+console.log(CalcularMediaFilhos())
+console.log(VerificarMaiorSalario())
+console.log(CalcularPorcentagem() + "%")
